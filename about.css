@@ -152,6 +152,103 @@
   flex-shrink: 0;
 }
 
+/* ---- FOUNDER STORY ---- */
+.founder-story {
+  padding: var(--section) 0;
+  background: var(--off-white);
+  border-top: 1px solid var(--border);
+}
+
+.founder-story-inner {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 80px;
+  align-items: start;
+}
+
+.founder-story-text h2 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 900;
+  color: var(--dark);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 28px;
+}
+
+.founder-p {
+  font-size: 0.97rem;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.founder-proof {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 36px;
+  position: sticky;
+  top: 100px;
+}
+
+.proof-header {
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 16px;
+}
+
+.proof-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.proof-tags span {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--dark);
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  border-radius: 50px;
+}
+
+.proof-outcome {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.proof-outcome-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(253,82,244,0.08);
+  border: 1px solid rgba(253,82,244,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.proof-outcome-icon svg {
+  width: 18px;
+  height: 18px;
+  color: var(--pink);
+}
+
+.proof-outcome p {
+  font-size: 0.875rem;
+  color: var(--text);
+  line-height: 1.75;
+}
+
 /* ---- TEAM SECTION ---- */
 .team {
   padding: var(--section) 0;
@@ -421,6 +518,9 @@
 @media (max-width: 960px) {
   .about-hero-inner { flex-direction: column; gap: 48px; }
   .about-hero-photo { flex: none; width: 100%; max-width: 500px; margin: 0 auto; }
+
+  .founder-story-inner { grid-template-columns: 1fr; gap: 48px; }
+  .founder-proof { position: static; }
 
   .team-card,
   .team-card--reverse {
